@@ -1,34 +1,56 @@
-import './index.css';
+/* eslint-disable no-unused-vars, no-console, no-debugger*/
+import $ from 'jquery';
+import css from './index.css';
 
-import {getUsers, deleteUser} from './api/userApi';
+$(document).ready(function () {
 
-// Populate table of users via API call.
-getUsers().then(result => {
-  let usersBody = "";
 
-  result.forEach(user => {
-    usersBody+= `<tr>
-      <td><a href="#" data-id="${user.id}" class="deleteUser">Delete</a></td>
-      <td>${user.id}</td>
-      <td>${user.firstName}</td>
-      <td>${user.lastName}</td>
-      <td>${user.email}</td>
-      </tr>`
+  $(".button-collapse").sideNav();
+  console.log('initialized side nav');
+
+
+  var index = 0;
+  $(document).scroll(function () {
+    var top = $('.technical').height() - $(window).scrollTop();
+    console.log(top)
+    if (top < -300) {
+      if (index == 0) {
+
+        $('.chart').easyPieChart({
+          easing: 'easeOutBounce',
+          onStep: function (from, to, percent) {
+            $(this.el).find('.percent').text(Math.round(percent));
+          }
+        });
+
+      }
+      index++;
+    }
+  })
+
+  // for banner height js
+  var windowWidth = $(window).width();
+  var windowHeight = $(window).height();
+  $('.banner').css({ 'width': windowWidth, 'height': windowHeight - "60" });
+
+
+  // chart loding
+  $(window).load(function () {
+
+    var chart = window.chart = $('.chart').data('easyPieChart');
+    $('.js_update').on('click', function () {
+      chart.update(Math.random() * 100);
+    });
   });
 
-  global.document.getElementById('users').innerHTML = usersBody;
+  $(window).resize(function () {
+    // for banner height js
+    var windowWidth = $(window).width();
+    var windowHeight = $(window).height();
+    $('.banner').css({ 'width': windowWidth, 'height': windowHeight - "60" });
 
-  const deleteLinks = global.document.getElementsByClassName('deleteUser');
-
-  // Must use array.from to create a real array from a DOM collection
-  // getElementsByClassname only returns an "array like" object
-  Array.from(deleteLinks, link => {
-    link.onclick = function(event) {
-      const element = event.target;
-      event.preventDefault();
-      deleteUser(element.attributes["data-id"].value);
-      const row = element.parentNode.parentNode;
-      row.parentNode.removeChild(row);
-    };
   });
+
 });
+
+

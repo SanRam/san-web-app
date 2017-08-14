@@ -1,0 +1,230 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"image",
+				"images"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/MS Sem 4/ISDS healthcare management/websitebackup/views/assets/homeNav/template/homeNav.tmpl",
+		"/D/MS Sem 4/ISDS healthcare management/websitebackup/views/assets/features/template/features.tmpl",
+		"/D/MS Sem 4/ISDS healthcare management/websitebackup/views/app/room/template/room.tmpl",
+		"/D/MS Sem 4/ISDS healthcare management/websitebackup/views/index.html",
+		"/D/MS Sem 4/ISDS healthcare management/websitebackup/views/assets/footer/template/footer.tmpl",
+		"/D/Website_san/San_Web/php/contact.php",
+		"/D/Website_san/San_Web/css/style.css",
+		"/D/Website_san/San_Web/css/font-awesome.css",
+		"/D/Website_san/San_Web/js/jquery.easypiechart.js",
+		"/D/Website_san/San_Web/js/bootstrap.js",
+		"/D/Website_san/San_Web/css/bootstrap.css",
+		"/D/Website_san/San_Web/js/jquery.placeholder.js",
+		"/D/Website_san/San_Web/js/modernizr.custom.26633.js",
+		"/C/xampp/apache/conf/extra/httpd-vhosts.conf",
+		"/C/xampp/apache/conf/httpd.conf",
+		"/D/Website_san/San_Web/images/skills.png"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"favicon",
+			"favicon.ico",
+			"favicon",
+			"hangon",
+			"hang",
+			"fidiomeet",
+			"row",
+			"iframe",
+			"foo",
+			"rss",
+			"font",
+			"twit",
+			"twi",
+			"rss",
+			"twi",
+			"fa",
+			"twitter",
+			"fa twitter",
+			"fa-twitter",
+			"exCon",
+			"h6",
+			"row",
+			"skillsarea",
+			"fa-twitter",
+			"fa",
+			"fa-2x",
+			"fa",
+			"fa-",
+			"fa-facebook",
+			"fa-twitter",
+			"fa",
+			"work",
+			"heading",
+			"slide",
+			"cb",
+			"chart skilBg",
+			"col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea",
+			"animate",
+			"scope",
+			"percent",
+			"easypiechart",
+			"chart skilBg",
+			"technical",
+			"col-xs",
+			"col_xs",
+			"Direct",
+			"doc"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 322.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

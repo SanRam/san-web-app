@@ -13,5 +13,12 @@
  */
 
 /* eslint-disable no-unused-vars */
+// import css
 
+import materialIcon from '../css/material-icon.css';
+import materializecsss from '../css/materialize.css';
+import slideshow from '../css/slideshow.css';
+// import js
 import fetch from 'whatwg-fetch';
+/* eslint-disable */
+import materialize from 'materialize-css';

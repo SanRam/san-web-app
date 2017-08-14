@@ -2,14 +2,14 @@ import path from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import WebpackMd5Hash from 'webpack-md5-hash';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
+
 
 export default {
   debug: true,
   devtool: 'source-map',
   noInfo: false,
   entry: {
-    vendor: path.resolve(__dirname, 'src/vendor'),
+    vendor: path.resolve(__dirname, 'src/assets/js/vendor'),
     main: path.resolve(__dirname, 'src/index')
   },
   target: 'web',
@@ -19,8 +19,10 @@ export default {
     filename: '[name].[chunkhash].js'
   },
   plugins: [
+    //import ExtractTextPlugin from 'extract-text-webpack-plugin';
     // Generate an external css file with a hash in the filename
-    new ExtractTextPlugin('[name].[contenthash].css'),
+    //new ExtractTextPlugin('[name].[contenthash].css'),
+    // loaders: ExtractTextPlugin.extract('css?sourceMap')}
 
     // Hash the files using MD5 so that their names change when the content changes.
     new WebpackMd5Hash(),
@@ -33,6 +35,7 @@ export default {
 
     // Create HTML file that includes reference to bundled JS.
     new HtmlWebpackPlugin({
+      favicon: 'src/assets/images/favicon.ico',
       template: 'src/index.html',
       minify: {
         removeComments: true,
@@ -53,12 +56,21 @@ export default {
     new webpack.optimize.DedupePlugin(),
 
     // Minify JS
-    new webpack.optimize.UglifyJsPlugin()
+    new webpack.optimize.UglifyJsPlugin(),
+
+
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery"
+    })
+
   ],
   module: {
     loaders: [
-      {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
-      {test: /\.css$/, loader: ExtractTextPlugin.extract('css?sourceMap')}
+      {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
+      {test: /\.css$/, exclude: /node_modules/, loader:  "style-loader!css-loader!autoprefixer-loader"},
+      {test: /\.(png|jpg|ttf|eot|woff|woff2|svg|ijmap)$/, exclude: /node_modules/, loader: "url-loader?limit=10000"}
     ]
   }
 };
