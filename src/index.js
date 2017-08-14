@@ -22,7 +22,7 @@ $(document).ready(function () {
       if (index == 0) {
 
         $('.chart').easyPieChart({
-          //easing: 'easeOutBounce',
+          easing: 'easeOutBounce',
           onStep: function (from, to, percent) {
             $(this.el).find('.percent').text(Math.round(percent));
           }
