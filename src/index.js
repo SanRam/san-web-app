@@ -1,6 +1,11 @@
 /* eslint-disable no-unused-vars, no-console, no-debugger*/
-import $ from 'jquery';
+/* eslint-disable */
+//import $ from 'jquery';
+
 import css from './index.css';
+
+
+
 
 $(document).ready(function () {
 
@@ -17,11 +22,14 @@ $(document).ready(function () {
       if (index == 0) {
 
         $('.chart').easyPieChart({
-          easing: 'easeOutBounce',
+          //easing: 'easeOutBounce',
           onStep: function (from, to, percent) {
             $(this.el).find('.percent').text(Math.round(percent));
           }
         });
+
+
+
 
       }
       index++;
@@ -34,6 +42,7 @@ $(document).ready(function () {
   $('.banner').css({ 'width': windowWidth, 'height': windowHeight - "60" });
 
 
+
   // chart loding
   $(window).load(function () {
 
@@ -41,6 +50,7 @@ $(document).ready(function () {
     $('.js_update').on('click', function () {
       chart.update(Math.random() * 100);
     });
+
   });
 
   $(window).resize(function () {
@@ -52,5 +62,6 @@ $(document).ready(function () {
   });
 
 });
+
 
 

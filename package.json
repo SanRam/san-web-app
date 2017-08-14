@@ -21,9 +21,11 @@
   "author": "Santhosh Ramaiah",
   "license": "MIT",
   "dependencies": {
-    "whatwg-fetch": "1.0.0",
+    "easy-pie-chart": "^2.1.7",
     "jquery": "^3.2.1",
-    "materialize-css": "^0.100.1"
+    "jquery.easing": "^1.4.1",
+    "materialize-css": "^0.100.1",
+    "whatwg-fetch": "1.0.0"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",

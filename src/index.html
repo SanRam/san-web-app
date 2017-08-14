@@ -273,16 +273,16 @@
 
     <div id="contact">
       <!--contact start-->
-      <section class="contact" id="contact">
+
+      <section class="contactDetails">
+
         <div class="container topCon">
-          <div class="heading">
+          <div >
             <h2>Get In Touch</h2>
-            <p>Please feel free if you would like to have a chat.</p>
+            <p>Please feel free to contact.</p>
           </div>
         </div>
 
-      </section>
-      <section class="contactDetails">
         <div class="container row">
           <!--contact info start-->
           <div class="col s12 m4 l4">
@@ -290,35 +290,41 @@
             <p> <i class="fa fa-map-marker fa-lg"></i> Bengaluru, KA, India.</p>
             <p> <i class="fa fa-mobile fa-lg"></i> +1 225 907 6582 / +91 99800 88805</p>
             <p> <i class="fa fa-envelope-o "></i> <a href="#">santhosh.r411 at gmail dot com</a></p>
-            <p> <i class="fa fa-link "></i> <a href="www.santhoshramaiah.com">www.santhoshramaiah.com </a></p>
+            <p> <i class="fa fa-link "></i> <a href="https://www.santhoshramaiah.com">www.santhoshramaiah.com </a></p>
           </div>
           <!--contact info end-->
           <!--contact form start-->
           <div class="col s12 m8 l8 conForm">
             <h4>Shoot a message!</h4>
             <div id="message"></div>
-            <form method="post" action="php/contact.php" name="cform" id="cform">
+            <div class="row">
 
-              <div class="row">
-                <div class="input-field col s6">
-                  <input id="full_name" type="text" class="validate">
-                  <label for="full_name">Full Name</label>
+              <form class="col s12" method="post" action="php/contact.php" name="cform" id="cform">
+
+                <div class="row">
+
+                  <div class="input-field col s6">
+                    <input id="name" type="text" class="validate">
+                    <label for="name">Full Name</label>
+                  </div>
+
+                  <div class="input-field col s6">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                  </div>
+
                 </div>
-                <div class="input-field col s6">
-                  <input id="email" type="email" class="validate">
-                  <label for="email">Email</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <textarea id="comments" class="materialize-textarea">
+
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="comments" class="materialize-textarea">
                   <label for="comments">Comments</label>
                 </div>
               </div>
 
               <div class="row">
                 <div class="input-field col s12">
-                    <input type="submit" id="submit" name="send" class="submitBnt" value="Send message">
+                    <input type="submit" id="submit" name="send" class="submitBnt " value="Send message">
                 </div>
               </div>
 

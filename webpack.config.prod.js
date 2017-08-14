@@ -32,11 +32,7 @@ export default {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor'
     }),
-
-    // Create HTML file that includes reference to bundled JS.
-    new HtmlWebpackPlugin({
-      favicon: 'src/assets/images/favicon.ico',
-      template: 'src/index.html',
+    /*
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -49,7 +45,17 @@ export default {
         minifyCSS: true,
         minifyURLs: true
       },
+      */
+    // Create HTML file that includes reference to bundled JS.
+    new HtmlWebpackPlugin({
+      favicon: 'src/assets/images/favicon.ico',
+      template: 'src/index.html',
+      minify: {
+        minifyCSS: true
+      },
       inject: true
+
+
     }),
 
     // Eliminate duplicate packages when generating bundle

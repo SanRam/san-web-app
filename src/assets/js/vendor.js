@@ -21,4 +21,7 @@ import slideshow from '../css/slideshow.css';
 // import js
 import fetch from 'whatwg-fetch';
 /* eslint-disable */
+import $ from 'jquery';
 import materialize from 'materialize-css';
+import easyPieChart from './jquery.easypiechart';
+import easing from './jquery.easing';
