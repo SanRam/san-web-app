@@ -47,7 +47,9 @@ export default {
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
       {test: /\.css$/, exclude: /node_modules/, loader:  "style-loader!css-loader"},
-      {test: /\.(png|jpg|ttf|eot|woff|woff2|svg|ijmap)$/, exclude: /node_modules/, loader: "url-loader?limit=10000"}
+      {test: /\.(png|jpg|svg|ttf|eot|woff|woff2|svg|ijmap)$/, exclude: /node_modules/, loader: "url-loader?limit=10000"},
+      {test: /\.(pdf)$/, exclude: /node_modules/, loader: "file?name=[name].[ext]"}
+
     ]
   }
 }
