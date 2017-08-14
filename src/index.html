@@ -274,85 +274,92 @@
     <div id="contact">
       <!--contact start-->
 
-      <section class="contactDetails">
+      <section class="contact contactDetails">
 
         <div class="container topCon">
-          <div >
+
+
+          <div class="heading">
             <h2>Get In Touch</h2>
             <p>Please feel free to contact.</p>
           </div>
-        </div>
 
-        <div class="container row">
-          <!--contact info start-->
-          <div class="col s12 m4 l4">
-            <h4>Contact details</h4>
-            <p> <i class="fa fa-map-marker fa-lg"></i> Bengaluru, KA, India.</p>
-            <p> <i class="fa fa-mobile fa-lg"></i> +1 225 907 6582 / +91 99800 88805</p>
-            <p> <i class="fa fa-envelope-o "></i> <a href="#">santhosh.r411 at gmail dot com</a></p>
-            <p> <i class="fa fa-link "></i> <a href="https://www.santhoshramaiah.com">www.santhoshramaiah.com </a></p>
-          </div>
-          <!--contact info end-->
-          <!--contact form start-->
-          <div class="col s12 m8 l8 conForm">
-            <h4>Shoot a message!</h4>
-            <div id="message"></div>
-            <div class="row">
 
-              <form class="col s12" method="post" action="php/contact.php" name="cform" id="cform">
-
-                <div class="row">
-
-                  <div class="input-field col s6">
-                    <input id="name" type="text" class="validate">
-                    <label for="name">Full Name</label>
-                  </div>
-
-                  <div class="input-field col s6">
-                    <input id="email" type="email" class="validate">
-                    <label for="email">Email</label>
-                  </div>
-
-                </div>
-
-                <div class="row">
-                  <div class="input-field col s12">
-                    <textarea id="comments" class="materialize-textarea">
-                  <label for="comments">Comments</label>
-                </div>
-              </div>
-
+          <div class="row">
+            <!--contact info start-->
+            <div class="col s12 m4 l4">
+              <h4>Contact details</h4>
+              <p class="valign-wrapper"> <i class="material-icons">my_location</i> Bengaluru, KA, India.</p>
+              <p class="valign-wrapper"> <i class="material-icons">local_phone</i> +1 225 907 6582 / +91 99800 88805</p>
+              <p class="valign-wrapper"> <i class="material-icons">email</i> santhosh.r411 at gmail dot com</p>
+              <p class="valign-wrapper"> <i class="material-icons">link</i> <a href="https://www.santhoshramaiah.com">www.santhoshramaiah.com </a></p>
+            </div>
+            <!--contact info end-->
+            <!--contact form start-->
+            <div class="col s12 m8 l8">
+              <h4>Shoot a message!</h4>
+              <div id="message"></div>
               <div class="row">
-                <div class="input-field col s12">
-                    <input type="submit" id="submit" name="send" class="submitBnt " value="Send message">
-                </div>
+
+                <form class="col s12" method="post" action="#">
+
+                  <div class="row">
+
+                    <div class="input-field col m6 l6">
+                      <i class="material-icons prefix">email</i>
+                      <input id="email" type="email" class="validate">
+                      <label for="email">Email</label>
+                    </div>
+
+                    <div class="input-field col m6 l6">
+                      <i class="material-icons prefix">account_circle</i>
+                      <input id="full_name" type="text">
+                      <label for="full_name">Full Name</label>
+                    </div>
+
+                  </div>
+
+
+
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <i class="material-icons prefix">comments</i>
+                      <textarea id="comments" class="materialize-textarea"></textarea>
+                      <label for="comments">Comments</label>
+                    </div>
+                  </div>
+
+
+                  <div class="row">
+                    <div class="input-field col s12 center-align">
+                      <input type="submit" id="submit" name="send" class="waves-effect waves-light btn blue btnsubmitBnt" value="Send message">
+                    </div>
+                  </div>
+
+
+
+
+                </form>
               </div>
-
-
-              <div id="simple-msg"></div>
-            </form>
+              <!--contact form end-->
+            </div>
           </div>
-          <!--contact form end-->
         </div>
+
+        <br>
+        <br>
       </section>
       <!--contact end -->
+
 
     </div>
   </main>
 
 
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-         <p><em><strong>Copyright © 2017  Santhosh Ramaiah </strong></em></p>
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+  <footer class="page-footer noPadd ">
+    <div class="footer-copyright noPadd valign-wrapper">
+      <div class="container  noPadd">
+        <p class="noPadd"><em><strong>Copyright © 2017  Santhosh Ramaiah </strong></em></p>
       </div>
     </div>
   </footer>

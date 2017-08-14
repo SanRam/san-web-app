@@ -1,4 +1,5 @@
 import path from 'path';
+import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
@@ -6,6 +7,7 @@ export default {
   devtool: 'inline-source-map',
   noInfo: false,
   entry: [
+    path.resolve(__dirname, 'src/assets/js/vendor'),
     path.resolve(__dirname, 'src/index')
   ],
   target: 'web',
@@ -15,12 +17,28 @@ export default {
     filename: 'bundle.js'
   },
   plugins: [
+
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery"
+    }),
+
     // Create HTML file that includes reference to bundled JS.
     new HtmlWebpackPlugin({
       favicon: 'src/assets/images/favicon.ico',
       template: 'src/index.html',
       minify: {
-        minifyCSS: true
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true
       },
       inject: true
     })
@@ -28,7 +46,8 @@ export default {
   module: {
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
-      {test: /\.css$/, loaders: ['style','css']}
+      {test: /\.css$/, exclude: /node_modules/, loader:  "style-loader!css-loader"},
+      {test: /\.(png|jpg|ttf|eot|woff|woff2|svg|ijmap)$/, exclude: /node_modules/, loader: "url-loader?limit=10000"}
     ]
   }
 }

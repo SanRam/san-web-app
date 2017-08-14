@@ -75,7 +75,7 @@ export default {
   module: {
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
-      {test: /\.css$/, exclude: /node_modules/, loader:  "style-loader!css-loader!autoprefixer-loader"},
+      {test: /\.css$/, exclude: /node_modules/, loader:  "style-loader!css-loader"},
       {test: /\.(png|jpg|ttf|eot|woff|woff2|svg|ijmap)$/, exclude: /node_modules/, loader: "url-loader?limit=10000"}
     ]
   }

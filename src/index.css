@@ -485,7 +485,9 @@ header {
 /*----------------------------------------------------
  11. Get in tuch Style
 ---------------------------------#ff675f---------------------*/
-
+.center-align{
+	margin: 0 auto;
+}
 .contact{
 	background:#fff;
 }
@@ -555,45 +557,6 @@ header {
 }
 
 
-.conForm input{
-	background:#585f73;
-	color:#93959c;
-	padding:15px 30px;
-	border:none;
-	margin-right:3%;
-	margin-bottom:30px;
-	outline:none;
-	font-style:italic;
-}
-.conForm input.noMarr{
-	margin-right:0px;
-}
-
-.conForm textarea{
-	background:#585f73;
-	color:#93959c;
-	padding:15px 30px;
-	border:none;
-	margin-bottom:40px;
-	outline:none;
-	height:100px;
-	font-style:italic;
-}
-
-
-.conForm .submitBnt{
-	background:#ff675f;
-	font-family: 'Open Sans', sans-serif;
-	color:#fff;
-	font-size:16px;
-	font-weight:600;
-	text-align:center;
-	float:right;
-	margin:0px;
-}
-.conForm .submitBnt:hover{
-	background:#f5534b;
-}
 
 .textGroup{
 	position:relative !important;
@@ -688,14 +651,7 @@ header {
 }
 
 
-@media screen and (min-width: 768px) {
-	.conForm input.col-sm-6 {
-		width: 48.5%;
-	}
-	.conForm input.col-lg-6 {
-		width: 48.5%;
-	}
-}
+
 
 
 @media screen and (max-width: 768px) {
@@ -807,9 +763,7 @@ header {
 		padding: 16px 14px;
 	}
 
-	.conForm textarea{
-		margin-bottom:20px;
-	}
+	
 	.textGroup{
 		display:block;
 		padding:0 0 40px 0;
