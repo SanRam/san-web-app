@@ -23,6 +23,12 @@ export default {
     // Generate an external css file with a hash in the filename
     //new ExtractTextPlugin('[name].[contenthash].css'),
     // loaders: ExtractTextPlugin.extract('css?sourceMap')}
+    // inject jquery
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery"
+    }),
 
     // Hash the files using MD5 so that their names change when the content changes.
     new WebpackMd5Hash(),
@@ -32,7 +38,11 @@ export default {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor'
     }),
-    /*
+
+    // Create HTML file that includes reference to bundled JS.
+    new HtmlWebpackPlugin({
+      favicon: 'src/assets/images/favicon.ico',
+      template: 'src/index.html',
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -45,14 +55,6 @@ export default {
         minifyCSS: true,
         minifyURLs: true
       },
-      */
-    // Create HTML file that includes reference to bundled JS.
-    new HtmlWebpackPlugin({
-      favicon: 'src/assets/images/favicon.ico',
-      template: 'src/index.html',
-      minify: {
-        minifyCSS: true
-      },
       inject: true
 
 
@@ -62,15 +64,10 @@ export default {
     new webpack.optimize.DedupePlugin(),
 
     // Minify JS
-    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.UglifyJsPlugin()
 
 
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery"
-    })
-
+  
   ],
   module: {
     loaders: [

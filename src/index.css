@@ -572,6 +572,28 @@ canvas {
 	line-height:21px;
 }
 
+/*----------------------------------------------------
+ 10. Protfolio Style
+------------------------------------------------------*/
+.protfolio{
+	background:#31314A;/*#31314A, #2bb3dd*/
+}
+.protfolio .container{
+	padding-top:85px ;
+	padding-bottom:90px ;
+}
+
+.protfolio .heading p{
+	padding-bottom:41px;
+}
+
+.protfolio h4{
+	font-weight:700;
+}
+
+.collapsible-body{
+	background-color: white;
+}
 
 /*----------------------------------------------------
  11. Get in tuch Style

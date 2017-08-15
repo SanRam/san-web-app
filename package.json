@@ -47,6 +47,7 @@
     "extract-text-webpack-plugin": "1.0.1",
     "favicons-webpack-plugin": "0.0.7",
     "file-loader": "^0.11.2",
+    "firebase-tools": "^3.9.2",
     "html-webpack-plugin": "2.22.0",
     "jquery": "^3.2.1",
     "jsdom": "9.8.0",
