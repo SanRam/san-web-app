@@ -20,7 +20,7 @@ $(document).ready(function () {
 
 
   $(".button-collapse").sideNav();
-  console.log('initialized side nav');
+  //console.log('initialized side nav');
 
   $("#downloadBtn")[0].href = resume.default;
 
@@ -72,7 +72,7 @@ $(document).ready(function () {
   var index = 0;
   $(document).scroll(function () {
     var top = $('.technical').height() - $(window).scrollTop();
-    console.log(top)
+    //console.log(top)
     if (top < 280) {
       if (index == 0) {
 
@@ -142,15 +142,7 @@ $('.banner').css({ 'width': windowWidth, 'height': windowHeight - "60" });
 
 
 
-// chart loding
-$(window).load(function () {
 
-  var chart = window.chart = $('.chart').data('easyPieChart');
-  $('.js_update').on('click', function () {
-    chart.update(Math.random() * 100);
-  });
-
-});
 
 $(window).resize(function () {
   // for banner height js

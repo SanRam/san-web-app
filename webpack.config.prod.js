@@ -64,7 +64,13 @@ export default {
     new webpack.optimize.DedupePlugin(),
 
     // Minify JS
-    new webpack.optimize.UglifyJsPlugin()
+    new webpack.optimize.UglifyJsPlugin({
+      comments:false,
+      compress:{
+        warnings:false,
+        drop_console:true
+      }
+    })
 
 
   
