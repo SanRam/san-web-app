@@ -13,7 +13,7 @@
 
 body {
 	color:#fff;
-	font-family: ''Roboto'';
+	font-family: 'Roboto';
 	font-weight: 300;
 	position:relative;
 	background:#000;
@@ -45,7 +45,7 @@ body {
 
 p{
 	font-family: 'Roboto';
-	font-size:14px;
+	font-size:16px;
 	line-height:21px;
 	font-weight:400;
 	padding-bottom:22px;
@@ -158,6 +158,10 @@ footer.page-footer {
   background-color: #262b37;
 }
 
+.copyright{
+  font-weight: 500;
+  font-style: italic;
+}
 
 /*----------------------------------------------------
  3.	Intro Part
@@ -280,14 +284,16 @@ header {
 
 .svg {
 	fill:#ffffff !important;
-	
+
     margin: auto;
     height: 60%;
 	width: 100%;
 	vertical-align: middle;
 }
 
-
+.dark-gray{
+  background-color: #262b37;
+}
 
 
 
@@ -354,14 +360,22 @@ header {
 
 
 .skilBg{
-	background:url(./assets/images/rsz_skills.png) no-repeat 0 0;
+  padding: 0px;
+	/*background:url(./assets/images/rsz_skills.png) no-repeat 0 0;
 
+  color: #ef1e25;
+  color: #f2f2f2;
+  color: #dfe0e0;
+  color: #e0e0e2;
+  color: #5c5c5c;
+  color: #0099ff;*/
+  display: inline-flex;
+  align-items: center;
 }
 
 
 .chart {
   position: relative;
-  display: inline-block;
   width: 110px;
   height: 110px;
   margin-bottom: 26px;
@@ -379,11 +393,11 @@ canvas {
 }
 
 .percent {
-  display: inline-block;
   font-size:21px;
   color:#474d5d;
   line-height: 76px;
   z-index: 2;
+  width: 100%;
 }
 .percent:after {
   content: '%';
@@ -397,6 +411,19 @@ canvas {
   margin-top: 0;
 }
 
+.chip{
+  font-size: 1.2rem;
+  background-color: #475A7E;
+  color: #ffffff;
+
+}
+
+.skill-list{
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
 
 /*----------------------------------------------------
  8.	Work Experience Style
@@ -407,6 +434,10 @@ canvas {
 .exprience .container{
 	padding-top:85px ;
 	padding-bottom:90px ;
+}
+
+.white-smoke{
+  background-color: #f3f3f3;
 }
 
 .exprience h2{
@@ -467,6 +498,14 @@ canvas {
 	background:#f3f3f3;
 	border-bottom:solid 4px #eeeeee;
 	padding:22px 47px 6px 47px;
+	margin-left:15px;
+	text-align:left;
+}
+
+.excon{
+	width:auto;
+
+	padding:22px 12px 6px 12px;
 	margin-left:15px;
 	text-align:left;
 }
@@ -815,7 +854,7 @@ canvas {
 		padding: 16px 14px;
 	}
 
-	
+
 	.textGroup{
 		display:block;
 		padding:0 0 40px 0;

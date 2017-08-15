@@ -11,7 +11,10 @@ import * as github from './assets/images/github-box.svg';
 import * as stackof from './assets/images/stackoverflow.svg';
 
 
-console.log(profilePic.default);
+
+
+
+
 
 $(document).ready(function () {
 
@@ -31,23 +34,55 @@ $(document).ready(function () {
   $("#github")[0].src = github.default;
   $("#stackof")[0].src = stackof.default;
 
+  //  footer dynamic year in cc.
+  var today = new Date();
+  var thisYear = today.getFullYear();
+  $('#copyright').text("Copyrights © "+ thisYear + " Santhosh Ramaiah");
 
-  console.log(profilePic.default);
+  function getDiff(past, present){
+    var presentYear = present.getFullYear();
+    var pastYear = past.getFullYear();
+    var year =  presentYear - pastYear;
+    var pastMonth = past.getMonth();
+    var presentMonth = present.getMonth();
+    var month = 0;
+    if(pastMonth < presentMonth){
+      month = presentMonth - pastMonth + 2; // optimizing for full month
+    }else{
+      month = pastMonth - presentMonth + 2;
+    }
+
+    var result = {y:year,m:month};
+    return result;
+  }
+
+  // steris work year calculation
+  var sterisStart =  new Date(2015,3);
+  var sterisStop = new Date();
+  var sterisExp =  getDiff(sterisStart,sterisStop);
+  $('.sterisExp').text( sterisExp.y + "y, " + sterisExp.m + "m*" );
+
+  // ltrc work year calculation not working
+  //var ltrcStart = new Date(2013,4);
+  //var ltrcStop = new Date(2014,12);
+  //var ltrcExp =  getDiff(ltrcStart,ltrcStop);
+  //$('.ltrcExp').text( ltrcExp.y + "y, " + ltrcExp.m + "m" );
+
 
   var index = 0;
   $(document).scroll(function () {
     var top = $('.technical').height() - $(window).scrollTop();
     console.log(top)
-    if (top < -300) {
+    if (top < 280) {
       if (index == 0) {
 
         $('.chart').easyPieChart({
           //easing: 'easeOutBounce',
-          'lineWidth' : 6, 
-          'barColor' : '#ef1e25',
-          'trackColor' : '#f2f2f2',
-          'scaleColor' : '#dfe0e0',
-          
+          'lineWidth' : 10,
+          'barColor' : '#0099ff',
+          'trackColor' : '#c1c1c1',
+          'scaleColor':false,
+
           onStep: function (from, to, percent) {
             $(this.el).find('.percent').text(Math.round(percent));
           }
