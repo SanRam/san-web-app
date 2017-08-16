@@ -591,8 +591,11 @@ canvas {
 	font-weight:700;
 }
 
+.collapsible-header{
+	background-color: #f3f3f3;
+}
 .collapsible-body{
-	background-color: white;
+	background-color:#E3DFE5;
 }
 
 /*----------------------------------------------------
